@@ -6,15 +6,53 @@ Get all active spares of the current user
 
 |URL|Auth|Description|
 |----|----|----|
-|/api/v1/user/{hashed_user_id}/{user_token}/all_spares|no|return array of objects|
+|`/api/v1/user/{hashed_user_id}/{user_token}/all_spares`|`no`|returns an array of objects|
 
-### Request example
+#### Params
+|Param|Description|
+|----|----|
+|`hashed_user_id`|Uniq user Id that encoded for security reasons|
+|`user_token`|Uniq user token. Provided for access to the api methids|
+
+#### Request example
 
 ```bash
-curl https://pmt5.com/api/v1/user/ynn/ukHi87zCdlEbkKSSTZjwjSuR1aGUe2pppM4DHH4FGbGskdG6UehNRSgpFgFV/all_spares
+$ curl https://pmt5.com/api/v1/user/{hashed_user_id}/{user_token}/all_spares
 ```
 
-### Response example
+#### Rresponse object description
+|Key|Value|Description|
+|----|----|----|
+|`user_code`|`string`|Uniq identificator of the spare|
+|`price`|`decimal`|Price of the spare|
+|`width`|`decimal`|Width of the spare|
+|`height`|`decimal`|Height of the spare|
+|`weight`|`decimal`|Weight  of the spare|
+|`length`|`decimal`|Length of the spare|
+|`original_number`|`text`|Original number or numbers of the spare|
+|`description`|`text`|Description of the spare|
+|`defects`|`text`|Defects of the spare|
+|`youtube_link`|`string`|Link to youtube. Only prefix. For example: https://www.youtube.com/watch?v={yotube_link}|
+|`spare_name`|`string`|Name of the spare|
+|`store`|`string`|Store name in which the spare was stored|
+|`images`|`object`|Objects with links to inages of the spare|
+|`car`|``object``|Objects with car's params|
+|`brand`|`string`|Brank of the car|
+|`model`|`string`|Model of the car|
+|`mod`|`string`|Modification of the car|
+|`mod_years`|`string`|Years of production of the car modification|
+|`params`|`object`|Parameters of the car|
+|`year`|`string`|Year of production of the current car|
+|`fuel`|`string`|Fuel type|
+|`cubic`|`string`|Cubic capacity|
+|`power`|`string`|Engine power (kW)|
+|`gearbox`|`string`|Gearbox|
+|`body`|`string`|Body type|
+|`color`|`string`|Color of the body|
+|`stearing_wheel`|`string`|Stearing wheel position|
+|`driven_wheel`|`string`|Count of the doors|
+
+#### Response example
 
 ```json
 [
@@ -31,7 +69,10 @@ curl https://pmt5.com/api/v1/user/ynn/ukHi87zCdlEbkKSSTZjwjSuR1aGUe2pppM4DHH4FGb
         "youtube_link":"-",
         "spare_name":"\u041a\u0443\u043b\u0438\u0441\u0430 \u041a\u041f\u041f",
         "store":"Lida, Ostrovlya 1 > c > 3",
-        "images":{"1":"https:\/\/pmt5.com\/img\/spares\/resized\/11BY1-spares-11BY1-23-e531ad999d.jpg"},
+        "images":
+        {
+            "1":"https:\/\/pmt5.com\/img\/spares\/resized\/11BY1-spares-11BY1-23-e531ad999d.jpg"
+        },
         "car":
         {
             "brand":"VW",
