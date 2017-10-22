@@ -1,12 +1,12 @@
 # pmt5_api
 Description of the api methods
 
-## all_spares()
+## all_active_spare_parts()
 Get all active spares parts of the current user
 
 |URL|Auth|Description|
 |----|----|----|
-|`/api/v1/user/{hashed_user_id}/{user_token}/all_spares?per_page=100&page=1`|`no`|returns an object|
+|`/api/v1/user/{hashed_user_id}/{user_token}/all_active_spare_parts?per_page=100&page=1`|`no`|returns an object|
 
 ```json
 {
@@ -25,7 +25,7 @@ Get all active spares parts of the current user
 
 #### Request example
 ```bash
-$ curl https://pmt5.com/api/v1/user/{hashed_user_id}/{user_token}/all_spares?per_page=100
+$ curl https://pmt5.com/api/v1/user/{hashed_user_id}/{user_token}/all_active_spare_parts?per_page=100
 ```
 
 #### Response object description
