@@ -2,7 +2,7 @@
 Description of the api methods
 
 ## all_spares()
-Get all active spares of the current user
+Get all active spares parts of the current user
 
 |URL|Auth|Description|
 |----|----|----|
@@ -23,19 +23,19 @@ $ curl https://pmt5.com/api/v1/user/{hashed_user_id}/{user_token}/all_spares
 #### Rresponse object description
 |Key|Value|Description|
 |----|----|----|
-|`user_code`|`string`|Uniq identificator of the spare|
-|`price`|`decimal`|Price of the spare|
-|`width`|`decimal`|Width of the spare|
-|`height`|`decimal`|Height of the spare|
-|`weight`|`decimal`|Weight  of the spare|
-|`length`|`decimal`|Length of the spare|
-|`original_number`|`text`|Original number or numbers of the spare|
-|`description`|`text`|Description of the spare|
-|`defects`|`text`|Defects of the spare|
+|`user_code`|`string`|Uniq identificator of the spare part|
+|`price`|`decimal`|Price of the spare part|
+|`width`|`decimal`|Width of the spare part|
+|`height`|`decimal`|Height of the spare part|
+|`weight`|`decimal`|Weight  of the spare part|
+|`length`|`decimal`|Length of the spare part|
+|`original_number`|`text`|Original number or numbers of the spare part|
+|`description`|`text`|Description of the spare part|
+|`defects`|`text`|Defects of the spare part|
 |`youtube_link`|`string`|Link to youtube. Only prefix. For example: https://www.youtube.com/watch?v={yotube_link}|
-|`spare_name`|`string`|Name of the spare|
-|`store`|`string`|Store name in which the spare was stored|
-|`images`|`object`|Objects with links to inages of the spare|
+|`part_name`|`string`|Name of the spare part|
+|`store`|`string`|Store name in which the spare part was stored|
+|`images`|`object`|Objects with links to inages of the spare part|
 |`car`|``object``|Objects with car's params|
 |`brand`|`string`|Brank of the car|
 |`model`|`string`|Model of the car|
@@ -67,7 +67,7 @@ $ curl https://pmt5.com/api/v1/user/{hashed_user_id}/{user_token}/all_spares
         "description":"-",
         "defects":"-",
         "youtube_link":"-",
-        "spare_name":"\u041a\u0443\u043b\u0438\u0441\u0430 \u041a\u041f\u041f",
+        "part_name":"\u041a\u0443\u043b\u0438\u0441\u0430 \u041a\u041f\u041f",
         "store":"Lida, Ostrovlya 1 > c > 3",
         "images":
         {
