@@ -6,7 +6,7 @@ Get all active spares parts of the current user
 
 |URL|Auth|Description|
 |----|----|----|
-|`/api/v1/user/{hashed_user_id}/{user_token}/all_spares?per_page=100`|`no`|returns an object|
+|`/api/v1/user/{hashed_user_id}/{user_token}/all_spares?per_page=100&page=1`|`no`|returns an object|
 
 ```json
 {
@@ -16,11 +16,12 @@ Get all active spares parts of the current user
 ```
 
 #### Request params
-|Param|Description|
-|----|----|
-|`hashed_user_id`|Uniq user Id that encoded for security reasons|
-|`user_token`|Uniq user token. Provided for access to the api methids|
-|`per_page`|`max:500` Count of the spare parts per page|
+|Param|Require|Description|
+|----|----|----|
+|`hashed_user_id`|`yes`|Uniq user Id that encoded for security reasons|
+|`user_token`|`yes`|Uniq user token. Provided for access to the api methids|
+|`per_page`|`[optional], default : 500, max:500`| Count of the spare parts per page|
+|`page`|`[optional]`|Page number with results of the request|
 
 #### Request example
 ```bash
