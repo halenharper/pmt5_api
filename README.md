@@ -52,7 +52,7 @@ $ curl https://pmt5.com/api/v1/user/{hashed_user_id}/{user_token}/all_active_spa
 |`defects`|`text`|Defects of the spare part|
 |`youtube_link`|`string`|Link to youtube. Only prefix. For example: https://www.youtube.com/watch?v={yotube_link}|
 |`part_name`|`string`|Name of the spare part|
-|`part_category_id`|`int`|Identifer of the spare part in the spare parts catalog|
+|`part_category_id`|`int`|Identifier of the spare part in the spare parts catalog|
 |`part_category_name`|`string`|Full name of the spare part in the catalog (full path)|
 |`store`|`string`|Store name in which the spare part was stored|
 |`images`|`object`|Objects with links to inages of the spare part|
