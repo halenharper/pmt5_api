@@ -4,9 +4,9 @@ Description of the api methods
 ## all_active_spare_parts()
 Get all active spares parts of the current user
 
-|URL|Auth|Description|
-|----|----|----|
-|`/api/v1/user/{hashed_user_id}/{user_token}/all_active_spare_parts?per_page=100&page=1`|`no`|returns an object|
+|URL|Auth|Method|Description|
+|----|----|----|----|
+|`/api/v1/user/{hashed_user_id}/{user_token}/all_active_spare_parts?per_page=100&page=1`|`no`|`GET`|returns an object|
 
 ```json
 {
