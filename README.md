@@ -20,7 +20,7 @@ Get all active spares parts of the current user
 |----|----|----|
 |`hashed_user_id`|`yes`|Uniq user Id that encoded for security reasons|
 |`user_token`|`yes`|Uniq user token. Provided for access to the api methids|
-|`per_page`|`[optional], default : 500, max:500`| Count of the spare parts per page|
+|`per_page`|`[optional], default : 250, max:250`| Count of the spare parts per page|
 |`page`|`[optional]`|Page number with results of the request|
 
 #### Request example
@@ -79,7 +79,7 @@ $ curl https://pmt5.com/api/v1/user/{hashed_user_id}/{user_token}/all_active_spa
     "paginator":
         {
             "total":10731,
-            "per_page":"500",
+            "per_page":"250",
             "pages_count":22,
             "current_page":1
         },
