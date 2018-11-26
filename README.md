@@ -55,7 +55,9 @@ $ curl https://pmt5.com/api/v1/user/{hashed_user_id}/{user_token}/all_active_spa
 |`part_category_id`|`int`|Identifier of the spare part in the spare parts catalog|
 |`part_category_name`|`string`|Full name of the spare part in the catalog (full path)|
 |`store`|`string`|Store name in which the spare part was stored|
-|`images`|`object`|Objects with links to inages of the spare part|
+|`images`|`object`|Objects with links to original images of the spare part|
+|`small_images`|`object`|Objects with links to resized images of the spare part|
+|`thumbs_images`|`object`|Objects with links to thumbnails of the images of the spare part|
 |`car`|``object``|Objects with car's params|
 |`brand`|`string`|Brank of the car|
 |`model`|`string`|Model of the car|
@@ -100,7 +102,15 @@ $ curl https://pmt5.com/api/v1/user/{hashed_user_id}/{user_token}/all_active_spa
                 "store":"Lida, Ostrovlya 1 > c > 3",
                 "images":
                     {
+                        "1":"https:\/\/pmt5.com\/img\/spares\/originals\/11BY1-spares-11BY1-23-e531ad999d.jpg"
+                    },
+                 "small_images":
+                    {
                         "1":"https:\/\/pmt5.com\/img\/spares\/resized\/11BY1-spares-11BY1-23-e531ad999d.jpg"
+                    },
+                 "thumbs_images":
+                    {
+                        "1":"https:\/\/pmt5.com\/img\/spares\/thumbs\/11BY1-spares-11BY1-23-e531ad999d.jpg"
                     },
                 "car":
                     {
